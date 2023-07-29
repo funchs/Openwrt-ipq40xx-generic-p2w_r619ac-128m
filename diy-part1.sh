@@ -14,5 +14,8 @@
 #sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 
 # Add a feed source
-echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
-echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
+#  增加luci-app-unblockneteasemusic，来源immortalwrt
+git clone https://github.com/immortalwrt/luci-app-unblockneteasemusic.git package/luci-app-unblockneteasemusic
+
+# CONFIG_PACKAGE_luci-app-filebrowser=y
+git clone https://github.com/immortalwrt/openwrt-filebrowser.git package/luci-app-filebrowser
